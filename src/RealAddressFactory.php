@@ -185,7 +185,7 @@ class RealAddressFactory
      * @param $lng
      * @return Address
      */
-    protected function performLookup($lat, $lng) : Address
+    protected function performLookup($lat, $lng) : ?Address
     {
         /** @var Address $address */
         $address = app('geocoder')->reverse($lat, $lng)->get()->first();
